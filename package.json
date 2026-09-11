@@ -1,0 +1,13 @@
+{
+  "name": "dinas-sublims-data",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free validation tooling for the repository data files.",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "test": "npm run validate"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
