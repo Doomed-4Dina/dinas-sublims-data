@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Doomed-4Dina/dinas-sublims-data/blob/main/schemas/phrases.schema.json",
+  "title": "Phrase data",
+  "$comment": "JSON Schema can enforce uniqueness within each group. Global cross-group uniqueness is enforced by scripts/validate.js.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["phrases"],
+  "properties": {
+    "phrases": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "array",
+        "minItems": 1,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    }
+  }
+}
